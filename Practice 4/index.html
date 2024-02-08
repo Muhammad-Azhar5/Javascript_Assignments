@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Words</title>
+</head>
+<body style="background-color: blanchedalmond;">
+<br><br><br>
+    <center><button onclick="Palin()" style="font-size: medium; border-radius: 10px; border-style:dotted; background-color:darksalmon"> Check the Palindrome words </button></center>
+
+    <script>
+        function Palin(){
+        
+        var palindrome = prompt("Enter a word of palindrome");
+        if (palindrome.toLowerCase() == "dad" || palindrome.toLowerCase() == "mom" || palindrome.toLowerCase() == "level" || palindrome.toLowerCase() == "wow") 
+        { alert( palindrome + " is a Palindrome");  
+    
+    }else { alert( palindrome + " is not a Palindrome");}
+            
+        }
+    </script>
+    
+</body>
+</html>
