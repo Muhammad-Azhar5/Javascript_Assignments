@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment 4</title>
+</head> <h1 style="text-align: center;"> JavaScript Assignment 4 </h1><br>
+
+<body style="background-color: blanchedalmond; margin-left: 40px; margin-top: 60px;">
+    
+    <b><p style="font-size: medium;">Q1.  Write a program that <br>
+        a. Store correct password in a JS variable. <br>
+        b. Asks user to enter his/her password <br>
+        c. Validate the two passwords: <br>
+        i. Check if user has entered password. If not, then give message “Please enter your password” <br>
+        ii. Check if both passwords are same. If they are same, show message “Correct! The password you entered matches the original password”. Show “Incorrect password” otherwise. 
+        </p> </b>
+            <button onclick="validatePassword()" style="border-radius: 20px; font-size: 15px;"> Validate Password </button>
+        <script>
+          
+            function validatePassword() {
+                 
+            let userPassword = "mypassword";
+            let adminPassword = "Azhar";
+            let leadPassword = "Adil";
+        
+            var userInput = prompt("Enter Your Password: ");
+            
+            if (userInput.toLowerCase() === "") 
+              {alert("Please enter your password");}
+            
+            else {
+                if (userInput.toLowerCase() === userPassword.toLowerCase() || userInput.toLowerCase() === adminPassword.toLowerCase() || userInput.toLowerCase() === leadPassword.toLowerCase()) {
+                  alert("Correct! The password you entered matches the original password");}
+                    else {alert("Incorrect password")}
+              }
+            } 
+        
+          </script>
+<br><br><hr color="brown"><br>
+
+<b><p style="font-size: medium;">Q2. This if/else statement does not work. Try to fix it: 
+    var greeting; <br>
+    var hour = 13; <br>
+    if (hour < 18) { <br>
+    greeting = "Good day";<br> 
+    else <br>
+    greeting = "Good evening"; }<br><br>
+        <button onclick="validatecondition()" style="border-radius: 20px; font-size: 15px;"> Validate if/else Condition </button>
+   <script>
+      
+        function validatecondition() {
+             
+            var greeting; 
+                var hour = 13; 
+                if (hour < 18) { 
+
+                alert("Good day")}
+                else 
+                {alert("Good evening")}            
+        }
+      </script>
+     <p style="font-family: 'sans-serif'; color:steelblue; font-size: medium;"> There's a small syntax error in provided code. We are missing a closing curly brace <span style="color:brown;">}</span> before the "else" statement and opening <span style="color:brown;"> { </span> braces afer it. Below is the corrected code: </p>
+
+        <p style="color: chocolate; margin-left: 50px ;">
+        var greeting;
+        var hour = 13;<br>
+        if (hour < 18) {<br>
+          greeting = "Good day";}<br> 
+        else {greeting = "Good evening";}</p><br>
+<hr color="brown"><br>
+
+<b><p style="font-size: medium;">Q3.  Arrays: <br>
+    a. Declare an empty array using JS literal notation to store student names in future. <br>
+    b. Declare an empty array using JS object notation to store student names in future. <br>
+    c. Declare and initialize a strings array. <br> 
+    d. Declare and initialize a numbers array. <br>
+    e. Declare and initialize a boolean array. <br>
+    f. Declare and initialize a mixed array. <br>
+    g. Declare and Initialize an array and store available education qualifications in Pakistan (e.g. SSC, HSC, BCS, BS, BCOM, MS, M. Phil., PhD). 
+    <br><br>
+        
+   <script>
+          var studentNames=[];
+
+          var studentNames = new Array();
+          
+          var stringsArray = ["Apple ", "Banana ", "Orange"];
+
+          var numbersArray = [1, 2, 3, 4, 5, 6, 7];
+          var booleanArray = [true, false];
+          var mixedArray = ["Apple", 10, true];
+          var qualify = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];
+           
+      </script>
+      <p style="color: chocolate; margin-left: 50px ;">
+       var studentNames=[];<br>
+       var studentNames = new Array();<br>
+       var stringsArray = ["Apple ", "Banana ", "Orange"];<br>
+       var numbersArray = [1, 2, 3, 4, 5, 6, 7];<br>
+       var booleanArray = [true, false];<br>
+       var mixedArray = ["Apple", 10, true];<br>
+       var qualify = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];</p><br>
+  <hr color="brown"><br>   
+
+      <b><p style="font-size: medium;">Q4. Initialize an array with color names. Display the array elements in your browser. <br>
+        a. Ask the user what color he/she wants to add to the begining & add that color to the begining of the array. Display the updated array in your browser. <br>
+        b. Ask the user what color he/she wants to add to the end & add that color to the end of the array. Display the updated array in your browser. <br>
+        c. Add two more color to the begining of the array. Display the updated array in your browser. <br>
+        d. Delete the first color in the array. Display the updated array in your browser. <br>
+        e. Delete the last color in the array. Display the updated array in your browser. <br>
+        f. Ask the user at which index he/she wants to add a color & color name. Then add the color to desired position/index. . Display the updated array in your browser. <br>
+        g. Ask the user at which index he/she wants to delete color(s) & how many colors he/she wants to delete. Then remove the same number of color(s) from user-defined position/index.<br>
+        Display the updated array in your browser.<br>
+        <br><br>
+        <button onclick="arrayinput()" style="border-radius: 20px; font-size: 15px;"> Array management </button> 
+        <script>
+          function arrayinput() {
+             var colors = [" Red ", " Green ", " Blue "," orange "];
+              document.write( "Colors in array are: [" + colors + " ]<br> <br> ");
+              
+              var colorAtBegining = prompt("Enter the color you want to add to the begining: ");
+              colors.unshift(colorAtBegining);
+              document.write("Array after adding color at the begining: [ " + colors + " ]<br><br> ");
+              
+              var colorAtEnd = prompt("Enter the color you want to add at the end: ");
+              colors.push(colorAtEnd);
+              document.write("Array after adding color at the end: [ " + colors+ " ]<br><br> ");
+              
+              colors.unshift(" grey ", " brown ");
+              document.write("Array after adding two more colors at the begining: [ " + colors+ " ]<br><br>");
+              
+              colors.shift();
+              document.write("Array after deleting the first color: [ " + colors + " ]<br><br> ");
+              
+              colors.pop();
+              document.write("Array after deleting the last color: [ " + colors + " ]<br> <br>");
+              
+              var index_no =+prompt("Enter the index where you want to add a color: ");
+              var colorToAdd = prompt("Enter the color you want to add at index " + index_no + " : ");
+              colors.splice(index_no, 0, colorToAdd);
+              document.write("Array after adding color at index [ " + index_no + " : " + colors + " ]<br> <br>");
+              
+              var index_no_Del = +prompt("Enter the index from which you want to delete colors: ");
+              var ColorsToDel_index = +prompt("Enter the number of colors you want to delete: ");
+              colors.splice(index_no_Del , ColorsToDel_index);
+              document.write("Array after deleting " +  ColorsToDel_index +  " colors from index " +index_no_Del + " : [ " + colors + " ]");
+          } 
+        </script>
+<br> <br> <hr color="brown"><br> 
+
+
+  <b><p style="font-size: medium;">Q5. Write a program to store student scores in an array & sort the array 
+    in ascending order using Array’s sort method. <br>
+    <br><br>
+          <button onclick="scores()" style="border-radius: 20px; font-size: 15px;"> Student Scores </button> 
+    
+    <script>
+          function scores() {
+            var scores = [80 , 65 , 90 , 75 , 85];
+            alert("Initial array: [ " + scores + " ]")
+     
+            scores.sort(function(a, b) {return a - b;});
+            
+            alert("Array after sorting in ascending order: [ " + scores + " ]")
+          }
+    </script>
+<br> <br> <hr color="brown"><br> 
+
+
+<b><p style="font-size: medium;">Q6. Write a program to store phone manufacturers (Apple, Samsung, 
+  Motorola, Nokia, Sony & Haier) in an array. <br>
+  Display the following dropdown/select menu in your browser using document.write() method:  <br>
+  <br><br>
+        <button onclick="Phone()" style="border-radius: 20px; font-size: 15px;"> Store Phone Manufacturers </button> 
+  
+  <script>
+        function Phone() {
+          var manufacturers = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+
+          
+          document.write('<select>');
+
+          for (var i = 0; i < manufacturers.length; i++) {
+            document.write('<option value= "' + manufacturers[i] + '">' + manufacturers[i] + '</option>');
+          }
+
+          document.write('</select>');
+        }
+  </script>
+<br> <br> <hr color="brown"><br> 
+
+
+<b><p style="font-size: medium;">Q7. Write a program to print multiplication table of any number using 
+  for loop. Table number & length should be taken as an input from user <br>
+  <br><br>
+        <button onclick="table()" style="border-radius: 20px; font-size: 15px;"> Multiplication table </button> 
+  
+  <script>
+        function table() {
+         
+          var tableNumber = prompt("Enter the table number:");
+          var tableLength = prompt("Enter the table length:");
+
+          document.write("<h2> Multiplication Table of " + tableNumber + " </h2>");
+              for (var i = 1; i <= tableLength; i++) {
+                var result = tableNumber * i;
+                document.write(tableNumber + " x " + i + " = " + result + "<br>");}      
+        }
+
+  </script>
+<br> <br> <hr color="brown"><br>
+
+<b><p style="font-size: medium;">Q8. Generate the following series in your browser. See example output. <br>
+  a. Counting: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 <br>
+  b. Reverse counting: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 <br>
+  c. Even: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 <br>
+  d. Odd: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 <br>
+  e. Series: 2k, 4k, 6k, 8k, 10k, 12k, 14k, 16k, 18k, 20k  <br>
+  <br><br>
+        <button onclick="count()" style="border-radius: 20px; font-size: 15px;"> Counting Series </button> 
+  
+  <script>
+        function count() {
+         
+              var counting = "";
+              for (var i = 1; i <= 15; i++) {
+                counting += i + ", ";}
+                document.write("<b> Counting: </b> [" + counting + " ]<br>");
+
+            
+              var reverseCounting = "";
+              for (var i = 10; i >= 1; i--) {
+                reverseCounting += i + ", ";
+              }
+              document.write("<b> Reverse counting: </b>[ " + reverseCounting + " ]<br>");
+
+            
+              var even = "";
+              for (var i = 0; i <= 20; i += 2) {
+                even += i + ", ";
+              }
+              document.write("<b>Even: </b>[ " + even + " ]<br>");
+
+              
+              var odd = "";
+              for (var i = 1; i <= 19; i += 2) {
+                odd += i + ", ";
+              }
+              document.write("<b>Odd: </b>[ " + odd + " ]<br>");
+
+       
+
+             var series = "";
+              for (var i = 1; i <= 10; i++) {
+                series += (i * 2) + "k, ";
+              }
+              document.write("Series: [ " + series + " ]");
+
+
+             //var series = "";
+          // for (var i = 1; i <= 10; i++) {  document.write("<b> series : </b>[ " + i * 2 + "k" + " ]"); }  
+        }
+
+  </script>
+<br> <br> <hr color="brown"><br>
+
+<b><p style="font-size: medium;">Q9. You have an array A = [“cake”, “apple pie”, “cookie”, “chips”, “patties”] <br>
+  Write a program to enable “search by user input” in an array. After searching, prompt the user whether the given item is found in the list or not. 
+   <br>
+  <br><br>
+        <button onclick="array_items()" style="border-radius: 20px; font-size: 15px;"> Products list </button> 
+  
+  <script>
+        function array_items() {
+         
+          var items = ["cake", "apple pie", "cookie", "chips", "patties"];
+            var userInput = prompt("Enter an item to search:");
+
+            var found = false;
+            for (var i = 0; i < items.length; i++) {
+              if (items[i] === userInput) {
+                found = true;
+                break;
+              }
+            }
+
+            if (found) {
+              alert(userInput + " is found in the list!");
+            } else {
+              alert(userInput + " is not found in the list.");
+            }     
+        }
+
+  </script>
+<br> <br> <hr color="brown"><br>
+
+<b><p style="font-size: medium;">Q10. Write a program that takes user input. Convert and show the input in title case. 
+  
+   <br>
+  <br><br>
+        <button onclick="convertTitle()" style="border-radius: 20px; font-size: 15px;"> Convert in to Title </button> 
+  
+  <script>
+        function convertTitle() {
+         
+          let userInput = prompt("Enter a sentence:");
+          let titleCase = userInput.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+          alert("Title Case: " + titleCase); 
+        }
+
+  </script>
+<br> <br> <hr color="brown"><br>
+
+<b><p style="font-size: medium;">Q11. Write a program that takes user input. Convert and show the input in capital letters. 
+   
+  
+  <br>
+ <br><br>
+       <button onclick="convertCapitalize()" style="border-radius: 20px; font-size: 15px;"> Convert in to Capital form </button> 
+ 
+          <script>
+                function convertCapitalize() {
+                  
+                  let userInput = prompt("Enter a sentence:");
+                  let capitalized = userInput.toUpperCase();
+                  alert("Capitalized: " + capitalized);
+                }
+
+          </script>
+<br> <br> <hr color="brown"><br>
+
+<b><p style="font-size: medium;">Q12. Write a program that converts a string “472” to a number 472. Display the values & types in your browser
+    
+  <br>
+ <br><br>
+       <button onclick="stringConverter()" style="border-radius: 20px; font-size: 15px;"> Convert String in to Number </button> 
+ 
+          <script>
+                function stringConverter() {
+                  
+                  let stringNumber = "472";
+                  let number = Number(stringNumber);
+
+                  document.write("<b>Original value: </b>" + stringNumber + "<br>");
+                  document.write("<b>Type of original value: </b>" + typeof stringNumber + "<br><br>");
+                  document.write("<b>Converted value: </b>" + number + "<br>");
+                  document.write("<b>Type of converted value: </b>" + typeof number + "<br>");
+                }
+
+          </script>
+<br> <br> <hr color="brown"><br>
+
+</body>
+</html>
